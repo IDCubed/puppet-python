@@ -1,6 +1,8 @@
 Puppet Python Module with Virtualenv, Pip and Gunicorn support
 ==============================================================
 
+forked from https://github.com/uggedal/puppet-module-python
+
 Module for configuring Python with virtualenvs and installation
 of packages inside them with pip in addition to serving
 Python WSGI applications including Django through Gunicorn.
@@ -17,9 +19,7 @@ Puppet 2.6. Patches for other operating systems welcome.
 TODO
 ----
 
-* Use /etc/gunicorn.d/ for instance configs and simplify
-  /etc/init.d/gunicorn. Possibly use a single gunicorn
-  init script like in Debian.
+* remove gunicorn, it is out of scope..
 * Uninstallation of packages no longer provided in the
   requirements file.
 
@@ -30,7 +30,7 @@ Installation
 Clone this repo to a python directory under your Puppet
 modules directory:
 
-    git clone git://github.com/uggedal/puppet-module-python.git python
+    git clone git://github.com/IDCubed/puppet-python.git python
 
 If you don't have a Puppet Master you can create a manifest file
 based on the notes below and run Puppet in stand-alone mode
