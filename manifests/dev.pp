@@ -14,4 +14,10 @@ class python::dev($ensure=present, $version=latest) {
   package { "${python}-${package_suffix}":
     ensure => $ensure,
   }
+
+  package { [ "${python}-setuptools"]:
+    ensure  => present,
+    require => Package["${python}-${package_suffix}"]
+  }
+
 }
